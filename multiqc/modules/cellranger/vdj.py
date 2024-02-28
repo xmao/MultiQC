@@ -172,7 +172,7 @@ class CellRangerVdjMixin:
                 mydict = mydict["summary"]
                 break
 
-        s_name = self.clean_s_name(mydict["sample"]["id"], f)
+        s_name = self.clean_s_name(mydict["sample"]["id"], f).replace("-scTCR", "")
 
         # Extract software version
         try:
